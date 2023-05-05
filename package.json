@@ -20,7 +20,6 @@
     "@storybook/html": "^7.0.8",
     "@storybook/html-webpack5": "^7.0.8",
     "@storybook/testing-library": "^0.0.14-next.2",
-    "@whitespace/storybook-addon-html": "^5.1.4",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
