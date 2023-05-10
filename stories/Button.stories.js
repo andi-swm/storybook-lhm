@@ -1,50 +1,82 @@
-import { createButton } from './Button';
-
-// More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction
 export default {
-  title: 'Example/Button',
-  tags: ['autodocs'],
-  render: ({ label, ...args }) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return createButton({ label, ...args });
+  title: "Example/M-Login Button",
+  tags: ["autodocs"],
+  render: ({ label, variant, size }) => {
+    return `<button type="button" class="mlogin-btn ${
+      size === "small" ? "mlogin-btn--small" : ""
+    } ${
+      variant === "secondary" ? "mlogin-btn--secondary" : ""
+    }"><span>${label}</span></button>`;
   },
   argTypes: {
-    backgroundColor: { control: 'color' },
-    label: { control: 'text' },
-    onClick: { action: 'onClick' },
-    primary: { control: 'boolean' },
+    label: { control: "text" },
+    variant: {
+      options: ["primary", "secondary"],
+      control: { type: "radio" },
+    },
     size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      control: { type: "select" },
+      options: ["small", "large"],
     },
   },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
 export const Primary = {
   args: {
-    primary: true,
-    label: 'Button',
+    label: "Mit M-Login anmelden",
+    variant: "primary",
+    size: "large",
+  },
+};
+
+export const PrimarySmall = {
+  args: {
+    label: "Mit M-Login anmelden",
+    variant: "primary",
+    size: "small",
   },
 };
 
 export const Secondary = {
   args: {
-    label: 'Button',
+    label: "Mit M-Login anmelden",
+    variant: "secondary",
+    size: "large",
   },
 };
 
-export const Large = {
+export const SecondarySmall = {
   args: {
-    size: 'large',
-    label: 'Button',
+    label: "Mit M-Login anmelden",
+    variant: "secondary",
+    size: "small",
   },
 };
 
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
+Primary.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/OCkOc9TZUzaagGJpRpgr9Q/Anmeldebutton?type=design&node-id=506%3A216&t=D30VpMsK0Yqyl6es-1",
+  },
+};
+
+PrimarySmall.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/OCkOc9TZUzaagGJpRpgr9Q/Anmeldebutton?type=design&node-id=506%3A216&t=D30VpMsK0Yqyl6es-1",
+  },
+};
+
+Secondary.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/OCkOc9TZUzaagGJpRpgr9Q/Anmeldebutton?type=design&node-id=506%3A216&t=D30VpMsK0Yqyl6es-1",
+  },
+};
+
+SecondarySmall.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/OCkOc9TZUzaagGJpRpgr9Q/Anmeldebutton?type=design&node-id=506%3A216&t=D30VpMsK0Yqyl6es-1",
   },
 };
