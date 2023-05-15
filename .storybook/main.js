@@ -9,7 +9,24 @@ const config = {
     "@storybook/addon-a11y",
     "@whitespace/storybook-addon-html",
     "storybook-addon-designs",
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        sass: {
+          implementation: require("sass"),
+        },
+      },
+    },
   ],
+  staticDirs: ["../public"],
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.twig$/,
+      use: "twigjs-loader",
+    });
+
+    return config;
+  },
   framework: {
     name: "@storybook/html-webpack5",
     options: {},

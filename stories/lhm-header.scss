@@ -1,0 +1,326 @@
+$grey: #cccccc !default;
+$light-grey: #f2f2f2 !default;
+$form-grey: #eeeeee !default;
+$mid-grey: #777777 !default;
+$dark-grey: #363636 !default;
+$light-black: #181818 !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+$strong-turquoise: #00a5be !default;
+$blue: #1462ac !default;
+$yellow: #ffcc00 !default;
+$yellow-light: #fff5ce !default;
+$magenta: #ad157c !default;
+$magenta-light: #aa88a0 !default;
+$error-color: #ff0000 !default;
+$erinnerungszeichen-dark-blue: #535f92 !default;
+
+$digitalradar-blue: #0063af !default;
+$digitalradar-petrol: #00a5c0 !default;
+$digitalradar-green: #91d6ac !default;
+$digitalradar-light-petrol: #80b1d7 !default;
+
+// ==========================================================================
+// Font Sizes
+// ==========================================================================
+
+$screen-l-fontsize-h1: 2.125rem;
+$screen-l-fontsize-h2: 1.625rem;
+$screen-l-fontsize-h3: 1.25rem;
+
+$screen-s-fontsize-h1: 2.125rem;
+$screen-s-fontsize-h2: 1.625rem;
+$screen-s-fontsize-h3: 1.25rem;
+
+$screen-xs-fontsize-h1: 1.625rem;
+$screen-xs-fontsize-h2: 1.5rem;
+$screen-xs-fontsize-h3: 1.25rem;
+
+// ==========================================================================
+// Theme definitions
+// ==========================================================================
+
+$mainColor: $blue;
+$secondColor: $strong-turquoise;
+
+// ==========================================================================
+// Screen Sizes
+// ==========================================================================
+
+$screen-xl: 1400px !default;
+$screen-l: 1368px !default;
+$screen-md: 1024px !default;
+$screen-s: 768px !default;
+$screen-xs: 480px !default;
+
+// Boostrap Breakpoints
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: $screen-s,
+	md: $screen-md,
+	lg: $screen-l,
+	xl: $screen-xl,
+);
+
+// ==========================================================================
+// Container Sizes
+// ==========================================================================
+
+$container-large: 1440px !default;
+$container-small: 846px !default;
+
+$container-large-screen-size: 1800px !default;
+
+.header {
+	background-color: $light-grey;
+
+	&--logo {
+		img {
+			height: 108px;
+		}
+	}
+
+	&--navigation {
+		nav {
+			.nav-menu {
+				.menu-item {
+					word-break: break-all;
+
+					ul {
+						background-color: $light-grey;
+						//width: 210px;
+
+						.has-submenu > a > i::before {
+							content: "\f285";
+							//font-family: bootstrap-icons; set via bi class
+						}
+					}
+
+					&:hover {
+						background-color: $white;
+					}
+
+					&:focus {
+						background-color: $white;
+
+						a {
+							&::after {
+								content: "";
+								display: block;
+								position: absolute;
+								width: 100%;
+								left: 0;
+								height: 4px;
+								background: $secondColor;
+								background: linear-gradient(to right, $secondColor 1%, $mainColor 100%);
+							}
+						}
+
+						&:focus-visible {
+							outline: none;
+						}
+					}
+
+					&.has-submenu > a > i::before {
+						content: "\f282";
+						//font-family: bootstrap-icons; set via bi class
+					}
+
+					&.open {
+						background-color: $white;
+					}
+
+					&.current-menu-item {
+						> a {
+							&::after {
+								content: "";
+								display: block;
+								position: absolute;
+								width: 100%;
+								left: 0;
+								height: 4px;
+								background: $secondColor;
+								background: linear-gradient(to right, $secondColor 1%, $mainColor 100%);
+							}
+						}
+					}
+
+					a {
+						display: block;
+						width: fit-content;
+						margin: 0;
+						margin-left: 72px;
+						color: $black;
+
+						&:hover {
+							&::after {
+								content: "";
+								display: block;
+								position: absolute;
+								width: 100%;
+								left: 0;
+								height: 4px;
+								background: $secondColor;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Search Menu
+		.search {
+			.inline-search {
+				span {
+					color: $dark-grey;
+				}
+			}
+
+			.inline-login {
+				span {
+					color: $dark-grey;
+				}
+			}
+		}
+
+		&.alwaysBurger {
+			.menu-item:last-child > ul > .has-submenu:last-child {
+				&:not(.open) > a {
+					border-bottom: 0px;
+				}
+
+				& > ul > .menu-item:last-child:not(.open) > a {
+					border-bottom: 0px;
+				}
+			}
+
+			.mobile-menu > .menu-item:last-child > ul > .menu-item:last-child:not(.has-submenu) > a {
+				border-bottom: 0px;
+			}
+
+			.mobile-nav {
+				&.opened {
+					.mobile-menu {
+						border-top: 3px solid $strong-turquoise;
+					}
+				}
+
+				.mobile-menu {
+					box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+					background-color: $light-grey;
+
+					& > .menu-item:last-child:not(.open) > a {
+						border-bottom: 0px;
+					}
+
+					.menu-item {
+						&.active {
+							background-color: $mainColor;
+
+							a {
+								color: $white;
+							}
+						}
+
+						a {
+							border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+							i {
+								position: static;
+								float: right;
+							}
+						}
+
+						&.has-submenu ul li {
+							padding-left: 1.5em;
+						}
+
+						&.has-submenu > a > i::before {
+							content: "\f282";
+							//font-family: bootstrap-icons; set via bi class
+						}
+					}
+				}
+
+				.mobile-menu-toggle {
+					box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+					border: 1px solid $grey;
+					background-color: $white;
+				}
+			}
+		}
+	}
+}
+
+// Mobile Layout
+@media screen and (max-width: $screen-l) {
+	.menu-item:last-child > ul > .has-submenu:last-child {
+		&:not(.open) > a {
+			border-bottom: 0px;
+		}
+
+		& > ul > .menu-item:last-child:not(.open) > a {
+			border-bottom: 0px;
+		}
+	}
+
+	.mobile-menu > .menu-item:last-child > ul > .menu-item:last-child:not(.has-submenu) > a {
+		border-bottom: 0px;
+	}
+
+	.header {
+		&--navigation {
+			.mobile-nav {
+				&.opened {
+					.mobile-menu {
+						border-top: 3px solid $strong-turquoise;
+					}
+				}
+
+				.mobile-menu {
+					box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+					background-color: $light-grey;
+
+					& > .menu-item:last-child:not(.open) > a {
+						border-bottom: 0px;
+					}
+
+					.menu-item {
+						&.active {
+							background-color: $mainColor;
+
+							a {
+								color: $white;
+							}
+						}
+
+						a {
+							border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+							i {
+								position: static;
+								float: right;
+							}
+						}
+
+						&.has-submenu ul li {
+							padding-left: 1.5em;
+						}
+
+						&.has-submenu > a > i::before {
+							content: "\f282";
+							//font-family: bootstrap-icons; set via bi class
+						}
+					}
+				}
+
+				.mobile-menu-toggle {
+					box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+					border: 1px solid $grey;
+					background-color: $white;
+				}
+			}
+		}
+	}
+}
