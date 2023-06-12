@@ -4,6 +4,7 @@ import "../src/main.min.css";
 
 const preview = {
   parameters: {
+    layout: "fullscreen",
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {

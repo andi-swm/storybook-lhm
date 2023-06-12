@@ -1,14 +1,14 @@
-import { Meta } from '@storybook/blocks';
-import Code from './assets/code-brackets.svg';
-import Colors from './assets/colors.svg';
-import Comments from './assets/comments.svg';
-import Direction from './assets/direction.svg';
-import Flow from './assets/flow.svg';
-import Plugin from './assets/plugin.svg';
-import Repo from './assets/repo.svg';
-import StackAlt from './assets/stackalt.svg';
+import { Meta } from "@storybook/blocks";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
 
-<Meta title="Example/Introduction" />
+<Meta title="LHM Digital/Introduction" />
 
 <style>
   {`
@@ -27,7 +27,7 @@ import StackAlt from './assets/stackalt.svg';
     .link-list {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr;
       row-gap: 10px;
     }
 
@@ -56,6 +56,7 @@ import StackAlt from './assets/stackalt.svg';
       color: #333333;
       display: flex;
       align-items: flex-start;
+      flex-direction: column;
     }
 
     .link-item:hover {
@@ -67,6 +68,16 @@ import StackAlt from './assets/stackalt.svg';
     .link-item:active {
       border-color: #1EA7FD;
       transform: translate3d(0, 0, 0);
+    }
+
+    .link-item__components,
+    .link-item__components p {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-item__components p a:hover {
+      text-decoration: underline;
     }
 
     .link-item strong {
@@ -116,98 +127,110 @@ import StackAlt from './assets/stackalt.svg';
   `}
 </style>
 
-# Welcome to Storybook
+# muenchen.digital
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+Die bestehende Microsite "Digitalradar" wird zur Microsite muenchen.digital ausgebaut.
+Dafür benötigt es neben den vorhandenen Inhalten und Funktionen des Digitalradars:
+Seiten für zwei neue Bereiche für die Darstellung der Digitalisierungsstratgie und von Digitalisierungsprojekten Frondend-Designs für zusätzliche (Inhalts-)Komponenten für die Gestaltung der Seiten der neuen Bereiche, siehe Komponentenliste
+Templates für die Darstellung von Meldungen und Veranstaltungen (werden in der Artikel-App von stadt.muenchen.de gepflegt) Das UI-Design basiert auf der aktuellen Digitalradar-Umsetzung sowie auf dem aktuellen Design von muenchen.digital.
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
-
-<div className="subheading">Configure</div>
+<div className="subheading">Templates</div>
 
 <div className="link-list">
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/addons/addon-types"
-    target="_blank"
-  >
+  <div className="link-item">
     <img src={Plugin} alt="plugin" />
     <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
+      <strong>Laoyout</strong>
+      Layout Komponenten (Header, Footer etc.)
     </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/webpack"
-    target="_blank"
-  >
+    <div className="link-item__components">
+      [Header](?path=/story/lhm-digital-layout-header--default-header)
+      [Footer](?path=/story/lhm-digital-layout-footer--default-footer)
+      [Section](?path=/story/lhm-digital-layout-section--default-section)
+    </div>
+  </div>
+  <div className="link-item">
     <img src={StackAlt} alt="Build" />
     <span>
-      <strong>Build configuration</strong>
-      How to customize webpack and Babel
+      <strong>Components</strong>
+      Übersicht der entwickelten Komponenten
     </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/styling-and-css"
-    target="_blank"
-  >
-    <img src={Colors} alt="colors" />
+    <div className="link-item__components">
+      [Breadcrumb](?path=/story/lhm-digital-components-breadcrumb--default-breadcrumb)
+      [Intro](?path=/story/lhm-digital-components-intro--default-intro)
+    </div>
+  </div>
+  <div className="link-item">
+    <img src={Repo} alt="Build" />
     <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
+      <strong>Pages</strong>
+      Beispielseiten mit verschiedenen Komponenten
     </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack"
-    target="_blank"
-  >
-    <img src={Flow} alt="flow" />
-    <span>
-      <strong>Data</strong>
-      Providers and mocking for data libraries
-    </span>
-  </a>
+    <div className="link-item__components">
+      {/* [Breadcrumb](?path=/story/lhm-digital-components-breadcrumb--default-breadcrumb)
+      [Intro](?path=/story/lhm-digital-components-intro--default-intro) */}
+    </div>
+  </div>
 </div>
 
-<div className="subheading">Learn</div>
+<div className="subheading">Assets</div>
 
 <div className="link-list">
-  <a className="link-item" href="https://storybook.js.org/docs" target="_blank">
-    <img src={Repo} alt="repo" />
+  <div className="link-item">
+    <img src={Colors} alt="Build" />
     <span>
-      <strong>Storybook documentation</strong>
-      Configure, customize, and extend
+      <strong>CSS, JS & Assets</strong>
+      Aktuelle CSS & JS Dateien für die Einbindung in Magnolia
     </span>
-  </a>
-  <a className="link-item" href="https://storybook.js.org/tutorials/" target="_blank">
-    <img src={Direction} alt="direction" />
-    <span>
-      <strong>In-depth guides</strong>
-      Best practices from leading teams
-    </span>
-  </a>
-  <a className="link-item" href="https://github.com/storybookjs/storybook" target="_blank">
-    <img src={Code} alt="code" />
-    <span>
-      <strong>GitHub project</strong>
-      View the source and add issues
-    </span>
-  </a>
-  <a className="link-item" href="https://discord.gg/storybook" target="_blank">
-    <img src={Comments} alt="comments" />
-    <span>
-      <strong>Discord chat</strong>
-      Chat with maintainers and the community
-    </span>
-  </a>
+    <div className="link-item__components">
+      <a href="assets/styles.zip" download>
+        <span>CSS</span>
+      </a>
+      <a href="assets/js.zip" download>
+        <span>JS</span>
+      </a>
+      <a href="assets/fonts.zip" download>
+        <span>Fonts</span>
+      </a>
+      <a href="assets/img.zip" download>
+        <span>Images</span>
+      </a>
+    </div>
+  </div>
 </div>
 
-<div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{' '}
-  <code>stories/Introduction.stories.mdx</code>
-</div>
+<div className="subheading">Changelog</div>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Komponente</th>
+      <th>Änderungen</th>
+    </tr>
+    <tr>
+      <td>Header</td>
+      <td>
+        <ul className="lhm__list">
+          <li>
+            <span>
+              Geringere Abstände rechts/links, damit mehr Navigationspunkte
+              passen
+            </span>
+          </li>
+          <li>
+            <span>LHM-Logo etwas kleiner darstellen</span>
+          </li>
+          <li>
+            <span>Suchfunktion neben Logo vorsehen</span>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Footer</td>
+      <td>
+        <span>Footer wurde übernommen mit kleinen Design Anpassungen</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

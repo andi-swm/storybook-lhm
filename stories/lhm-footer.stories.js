@@ -1,4 +1,3 @@
-import "./lhm-footer.scss";
 import twigFooter from "./lhm-footer.twig";
 
 export default {
@@ -13,6 +12,6 @@ export const DefaultFooter = Template.bind({});
 DefaultFooter.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/PXwj2hl61LS7dSauqw66rb/muenchen.digital?type=design&node-id=1%3A2&t=UxcdsWG5UrNU2vuD-1",
+    url: "https://www.figma.com/file/tDn37wQf4r5cIoUWBUu28r/UI-Design?type=design&node-id=0%3A1&t=4uByRUZZeRsxSL1u-1",
   },
 };

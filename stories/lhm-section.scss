@@ -1,0 +1,20 @@
+.content-section {
+	width: 100vw;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100%;
+
+	&--blue {
+		background: linear-gradient(180deg, #80b1d7 0%, #e6eff7 100%);
+	}
+
+	&--green {
+		background: linear-gradient(180deg, #c8ead5 0%, #f4fbf7 100%);
+	}
+
+	&--turquoise {
+		background: linear-gradient(180deg, #80d2df 0%, #e6f6f9 100%);
+	}
+}

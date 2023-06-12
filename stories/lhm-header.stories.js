@@ -1,4 +1,3 @@
-import "./lhm-header.scss";
 import twigHeader from "./lhm-header.twig";
 
 export default {
