@@ -1,4 +1,5 @@
 import "../src/main.min.css";
+import "../src/build";
 
 /** @type { import('@storybook/html').Preview } */
 
