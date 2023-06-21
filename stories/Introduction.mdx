@@ -73,7 +73,8 @@ import StackAlt from "./assets/stackalt.svg";
     .link-item__components,
     .link-item__components p {
       display: flex;
-      flex-direction: column;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .link-item__components p a:hover {
@@ -156,6 +157,15 @@ Die bestehende Microsite "Digitalradar" wird zur Microsite muenchen.digital ausg
       [Breadcrumb](?path=/story/lhm-digital-components-breadcrumb--default-breadcrumb)
       [Intro](?path=/story/lhm-digital-components-intro--default-intro)
       [Accordion](?path=/story/lhm-digital-components-accordion--default-accordion)
+      [Buttons](?path=/story/lhm-digital-components-buttons--primary-button)
+      [Horizontal
+      Line](?path=/story/lhm-digital-components-horizontalline--hr-variations)
+      [Infographic](?path=/story/lhm-digital-components-infographic--default-infographic)
+      [Linklist](?path=/story/lhm-digital-components-linklist--default-linklist)
+      [Quote](?path=/story/lhm-digital-components-quote--default-quote)
+      [Teaser](?path=/story/lhm-digital-components-teaser--default-teaser) [Text
+      with
+      asset](?path=/story/lhm-digital-components-textasset--default-section)
     </div>
   </div>
   <div className="link-item">
@@ -165,7 +175,7 @@ Die bestehende Microsite "Digitalradar" wird zur Microsite muenchen.digital ausg
       Beispielseiten mit verschiedenen Komponenten
     </span>
     <div className="link-item__components">
-      [Sample](?path=/story/lhm-digital-pages-sample--default-sample-page)
+      [Sample Home](?path=/story/lhm-digital-pages-sample-home--sample-home)
     </div>
   </div>
 </div>
@@ -198,48 +208,12 @@ Die bestehende Microsite "Digitalradar" wird zur Microsite muenchen.digital ausg
 
 <div className="subheading">Changelog</div>
 
-<table>
-  <tbody>
-    <tr>
-      <th>Komponente</th>
-      <th>Änderungen</th>
-    </tr>
-    <tr>
-      <td>Header</td>
-      <td>
-        <ul className="lhm__list">
-          <li>
-            <span>
-              Geringere Abstände rechts/links, damit mehr Navigationspunkte
-              passen
-            </span>
-          </li>
-          <li>
-            <span>LHM-Logo etwas kleiner darstellen</span>
-          </li>
-          <li>
-            <span>Suchfunktion neben Logo vorsehen</span>
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Footer</td>
-      <td>
-        <span>Footer wurde übernommen mit kleinen Design Anpassungen</span>
-      </td>
-    </tr>
-    <tr>
-      <td>Section</td>
-      <td>
-        <span>Hintergrundverläufe hinzugefügt</span>
-      </td>
-    </tr>
-    <tr>
-      <td>Breadcrumb</td>
-      <td>
-        <span>Hintergrundverläufe hinzugefügt</span>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div className="changelog">
+  <h3>21-06-2023</h3>
+  <ul>
+    <li>✅ Neue Komponenten hinzugefügt</li>
+    <li>✅ Neue Seiten hinzugefügt</li>
+    <li>🔧 Accordion Markup geändert</li>
+    <li>🔧 Digital Radar Styles importiert</li>
+  </ul>
+</div>

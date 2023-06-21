@@ -13203,13 +13203,16 @@ span:focus-visible {
 body {
   color: #363636;
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
 }
 body.has-bgcolor {
   background-color: #f2f2f2;
 }
 a {
   color: #363636;
+}
+img {
+  max-width: 100%;
 }
 h1.underlined:after,
 h2.underlined:after,
@@ -13321,13 +13324,6 @@ h2 {
   background-size: cover;
 }
 
-.content-section.fixed-bg.bg-waben.blue-gradient-bg {
-  background-image: linear-gradient(
-    90deg,
-    rgba(0, 165, 190, 0.99),
-    rgba(0, 100, 175, 0.8)
-  );
-}
 .row > div > div.has-border {
   background-color: #fff;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
@@ -14602,6 +14598,7 @@ input[type="number"] {
 }
 .sidebar-nav ul li a {
   background-color: inherit;
+
   background-size: contain;
 }
 .sidebar-nav ul li a span {
@@ -15610,6 +15607,7 @@ input[type="number"] {
 }
 .quote {
   padding: 40px 40px 40px 80px;
+  position: relative;
 }
 @media (max-width: 1023.98px) {
   .quote {
@@ -16368,7 +16366,7 @@ input[type="number"] {
   color: #000;
   display: block;
   font-size: 54px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   overflow-wrap: break-word;
   padding: 0;
   text-transform: none;
@@ -16425,16 +16423,26 @@ input[type="number"] {
   height: 60px;
   width: 50px;
 }
-.accordion-header {
+.accordion-header button {
   font-size: 1.5rem;
+}
+@media (max-width: 1023.98px) {
+  .accordion-header button {
+    font-size: 1.25rem;
+  }
 }
 .accordion .accordion-item:first-of-type .accordion-header {
   border-top: 0;
 }
-.accordion-content > h3 button {
+.accordion > h3 {
   font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1023.98px) {
+  .accordion > h3 {
+    font-size: 1.75rem;
+  }
 }
 .accordion-content .accordion-item > h3 {
   font-size: 1.625rem;
@@ -16465,6 +16473,9 @@ input[type="number"] {
 .accordion-content.accordion--green .accordion-header,
 .accordion-content.accordion--green .accordion-item:last-child {
   border-color: #c8ead5;
+}
+.button-wrapper {
+  padding: 20px 0;
 }
 .button-wrapper .button {
   border-radius: 40px;
@@ -16501,6 +16512,7 @@ input[type="number"] {
 }
 .teaser-hero {
   left: 50%;
+  margin-bottom: -10px;
   margin-left: -50vw;
   margin-right: -50vw;
   position: relative;
@@ -16647,6 +16659,12 @@ input[type="number"] {
   clear: both;
   content: "";
   display: table;
+}
+.content-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: none;
 }
 .radar {
   position: relative;

@@ -24,6 +24,34 @@ export const TeaserHero = TemplateHero.bind({});
 DefaultTeaser.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/tDn37wQf4r5cIoUWBUu28r/UI-Design?type=design&node-id=1%3A954&t=4uByRUZZeRsxSL1u-1",
+    url: "https://www.figma.com/file/tDn37wQf4r5cIoUWBUu28r/UI-Design?type=design&node-id=1%3A804&t=MAUtbg71k4My7AX1-1",
+  },
+};
+
+TeaserNoImage.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/tDn37wQf4r5cIoUWBUu28r/UI-Design?type=design&node-id=1%3A804&t=MAUtbg71k4My7AX1-1",
+  },
+};
+
+TeaserEvent.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/tDn37wQf4r5cIoUWBUu28r/UI-Design?type=design&node-id=1%3A804&t=MAUtbg71k4My7AX1-1",
+  },
+};
+
+TeaserReport.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/tDn37wQf4r5cIoUWBUu28r/UI-Design?type=design&node-id=1%3A804&t=MAUtbg71k4My7AX1-1",
+  },
+};
+
+TeaserHero.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/tDn37wQf4r5cIoUWBUu28r/UI-Design?type=design&node-id=1%3A804&t=MAUtbg71k4My7AX1-1",
   },
 };
