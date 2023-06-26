@@ -1,4 +1,5 @@
 import twigAccordion from "./lhm-accordion.twig";
+import "./lhm-accordion.scss";
 
 export default {
   title: "LHM Digital/Components/Accordion",
